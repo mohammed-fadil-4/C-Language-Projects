@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int a, b, c, d, e, print_cost, sell_cost, shortage_cost, profit;
+    printf("Enter total no. of copies: ");
+    scanf("%d",&a);
+    printf("Enter the printing cost of each newspaper: ");
+    scanf("%d",&b);
+    printf("Enter the selling price of the newspaper: ");
+    scanf("%d",&c);
+    printf("Enter the number of weeks: ");
+    scanf("%d",&d);
+    printf("Enter the shortage cost per week: ");
+    scanf("%d",&e);
+    shortage_cost = d * e;
+    print_cost = ((a * b)*d);
+    printf("Total printing cost is: %d\n", print_cost);
+    sell_cost = ((a * c)*d);
+    printf("Total selling cost is: %d\n", sell_cost);
+    profit = ((sell_cost - print_cost) - shortage_cost);
+    printf("Profit Amount is: %d\n", profit);
+}

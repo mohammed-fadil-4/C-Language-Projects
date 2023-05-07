@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int amount, percentage1, percentage2, percentage3, num_of_pirates = 3;
+    int balance;
+    printf("Enter the total amount: ");
+    scanf("%d", &amount);
+    printf("Share for Black Bear:");
+    percentage1 = 50.0;
+    int amount_blackbear = amount * (percentage1 / 100.0);
+    printf("%d\n", amount_blackbear);
+    printf("Share for Long Bear:");
+    percentage2 = 35.0;
+    int amount_longbear = amount * (percentage2 / 100.0);
+    printf("%d\n", amount_longbear);
+    printf("Share for each Pirates:");
+    percentage3 = 15.0 / num_of_pirates;
+    int amount_pirates = amount * (percentage3 / 100.0);
+    printf("%d\n", amount_pirates);
+    int bal = amount - (amount_blackbear + amount_longbear + (amount_pirates * 3));
+    printf("Balance coins: ");
+    printf("%d\n",bal);
+    return 0;
+}
